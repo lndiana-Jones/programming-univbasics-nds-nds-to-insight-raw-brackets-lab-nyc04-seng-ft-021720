@@ -9,7 +9,11 @@ def directors_totals(nds)
     result[directors_database[index][:name]] = 0
     count = 0 
     
-    #while count < directors_database[index]
+    while count < directors_database[index][:name][:movies].length
+    
+      result[directors_database][index][:name] += directors_database[index][:name][movies][count][:worldwide_gross]
+      count += 1
+      end 
     index += 1
   end
 return result  
